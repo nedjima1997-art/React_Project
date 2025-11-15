@@ -3,9 +3,10 @@ import './App.css';
 import About from './components/About/About';
 import Calculatrice from './components/Calculator';
 import Contact from './components/contact/FormContact';
-
+import {UseStateHook} from './components/UseStateHook'
 import Service from './components/Services';
 import Home from './Home';
+import ExoState from './components/ExoState';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
     <About name={"Nedjima"} age={28}/>
     <About name={"Ines"} age={19}/>
     <Calculatrice module1={19} module2={9}/>
+    <UseStateHook/>
+    <ExoState/>
 
     </div>
   );
