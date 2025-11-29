@@ -1,25 +1,33 @@
-
 import './App.css';
 import About from './components/About/About';
 import Calculatrice from './components/Calculator';
 import Contact from './components/contact/FormContact';
-import {UseStateHook} from './components/UseStateHook'
 import Service from './components/Services';
-import Home from './Home';
+import EffectHook from './components/EffectHook';
+import EffectWIthCleanup from './components/EffectWithCleanup';
+import EffectWithParametres from './components/EffectWithParametres';
 import ExoState from './components/ExoState';
+import UseStateHook from './components/UseStateHook';
+import Home from './Home';
+
 
 function App() {
   return (
     <div className="App">
-    <h1>Welcome !</h1>
-    <Home/>
-    <Contact/>
-    <Service/>
-    <About name={"Nedjima"} age={28}/>
-    <About name={"Ines"} age={19}/>
-    <Calculatrice module1={19} module2={9}/>
-    <UseStateHook/>
-    <ExoState/>
+      <h1>Welcome to my project</h1>
+      {/* <Home />
+      <Contact />
+      <Service />
+      <About name={"Ines"} age={19} />
+      <About name={"Dyhia"} age={21} />
+      <Calculatrice note1={15} note2={12} />
+
+      <UseStateHook />
+      <ExoState />
+      <EffectHook/>
+       */}
+      <EffectWithParametres/>
+      <EffectWIthCleanup/>
 
     </div>
   );

@@ -1,14 +1,20 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-const ExoState = () => {
-    const [couleur, setCouleur] = useState("dark")
-    const Change =() => {
-        setCouleur("red")
+function ExoState() {
+  const [Color, setColor] = useState("red")
+  const ChangeColor = () => {
+    // !setColor("green")
+    if (Color === "red") {
+      setColor("purple")
+    } else {
+      setColor("red")
     }
+  }
+
   return (
     <div>
-        <h1 style={{color : couleur}}>Salut tout le monde</h1>
-        <button onClick={Change}>ChangeColor</button>
+      <h1 style={{ color: Color }}>Salut tout le monde</h1>
+      <button onClick={ChangeColor}>Change Color</button>
     </div>
   )
 }

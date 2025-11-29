@@ -1,20 +1,23 @@
 import React, { useState } from 'react'
 
-export const  UseStateHook= () => {
-    const [Count,setCount] = useState(0)
-    const Incrementation=() => {
-      setCount (Count+1)
-    }
-    const Dencrementation=() => {
-      setCount (Count-1)
-    }
+function UseStateHook() {
+  // useStateSnippet "setcount" est une fonction pour metre à jour le state
+  const [count, setcount] = useState(0)
 
+  const Incrémentation = () => {
+    setcount(count + 1)
+  }
+  const Décrémentation = () => {
+    setcount(count - 1)
+  }
   return (
     <div>
-        <p> Mon compteur initial est : {Count}</p>
-        <button onClick={Incrementation}>Incrementer</button>
-        <button onClick={Dencrementation}>Décrementer</button>
-
+      <p>Mon compteur initial est : {count} </p>
+      <button onClick={Incrémentation}>Incrémenter</button>
+      <button onClick={Décrémentation}> Décrémenter</button>
     </div>
+    
   )
 }
+
+export default UseStateHook
